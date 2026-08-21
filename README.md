@@ -95,7 +95,7 @@ Rscript 05_manuscript_analyses.R compare_time_windows incremental
 
 ---
 
-### 06_NetworkCentralityAnalysis.py - Network Centrality Analysis
+### `06_NetworkCentralityAnalysis.py` - Network Centrality Analysis
 
 Computes network metrics using different edge-weighting strategies derived from disease association data. Contain two functions: one for computing the metrics (weighted outdegree and pagerank) from networks created from disease association data. Specified diseases can be excluded from the analysis prior to network construction and one to compute disease rankings based on the computed metrics. Results are saved to disk for downstream analyses.
 
@@ -120,6 +120,7 @@ python disease_network.py rankings <file> --pathSave results --metrics OutDegree
 ## Dependencies
 
 R packages: `data.table`, `fst`, `survival`, `ashr`, `igraph`, `UpSetR`, `ggplot2`, `ggrepel`, `ggtext`, `ggnewscale`, `patchwork`, `plotly`, `ggalluvial`, `forestplot`, `EbayesThresh`, `VennDiagram`, `dendextend`, `gplots`, `gridExtra`, `MASS`, `flextable`, `officer`, `dplyr`, `tidyr`, `scales`
+
 Python packages: `pandas`, `numpy`, `networkx`
 
 ---
