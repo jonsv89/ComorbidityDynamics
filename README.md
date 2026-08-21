@@ -97,7 +97,47 @@ Rscript 05_manuscript_analyses.R compare_time_windows incremental
 
 ### `06_NetworkCentralityAnalysis.py` - Network Centrality Analysis
 
-Computes network metrics using different edge-weighting strategies derived from disease association data. Contain two functions: one for computing the metrics (weighted outdegree and pagerank) from networks created from disease association data. Specified diseases can be excluded from the analysis prior to network construction and one to compute disease rankings based on the computed metrics. Results are saved to disk for downstream analyses.
+Computes network metrics using different edge-weighting strategies derived from disease association data. Contain two functions: 
+
+#### `compute_metrics()`
+
+Compute network metrics (weighted outdegree and pagerank) using different edge-weighting strategies.
+
+This function generates and evaluates disease networks from the input dataset using one or more edge-weight definitions. 
+Specified diseases can be excluded from the analysis prior to network construction.
+Results are saved to disk for downstream analyses.
+
+##### Parameters
+
+| Parameter   | Type | Description                                       |
+|-------------|------|---------------------------------------------------|
+| `file`        | str  | Input file containing disease association data.   |
+| `pathLoad`    | str  | Path to the input file directory.                 |
+| `pathSave`    | str  | Path to the directory where to save the results.  |
+| `diseasesOut` | list | Disease codes to exclude from the analysis.       |
+| `edgeWeight`  | list | Edge weighting methods used to build the network. |
+| `verbose`     | bool | Display progress messages when `True`.              |
+
+#### `compute_rankings()`
+
+Compute node rankings in a disease network using multiple network centrality metrics and edge-weighting schemes.
+
+Calculates disease rankings based on the selected network metrics.
+Rankings are computed independently for each edge-weight definition, allowing comparison of how
+different weighting strategies influence node importance.
+Results are saved to disk for downstream analyses.
+
+##### Parameters
+
+| Parameter  | Type | Description                                       |
+|------------|------|---------------------------------------------------|
+| `file`       | str  | Input file containing disease association data.   |
+| `pathLoad`   | str  | Path to the input file directory.                 |
+| `pathSave`   | str  | Path to the directory where to save the results.  |
+| `metrics`    | list | Network metrics used to rank nodes.               |
+| `edgeWeight` | list | Edge weighting methods used to build the network. |
+| `verbose`    | bool | Display progress messages when `True`.            |
+
 
 ####  Example Workflow
 
