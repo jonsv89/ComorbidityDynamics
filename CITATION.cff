@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "biological-clock-of-multimorbidity"
+abstract: >-
+  Analysis pipeline for "The biological clock of multimorbidity: temporal
+  dynamics of disease co-occurrence in primary care" -- case-control
+  matching, temporal-window relative-risk estimation with empirical Bayes
+  shrinkage, and associated sensitivity analyses.
+authors:
+  - family-names: "Sánchez Valle"
+    given-names: "Jon"
+    affiliation: "Barcelona Supercomputing Center"
+    orcid: "https://orcid.org/0000-0001-7959-6326"
+  - family-names: "Zambrana"
+    given-names: "Carme"
+    affiliation: "Barcelona Supercomputing Center"
+    email: "carme.zambrana@bsc.es"
+    orcid: "https://orcid.org/0000-0003-2625-1900"
+  - family-names: "Costa"
+    given-names: "Felipe Xavier"
+    affiliation: "Universidade Católica Portuguesa"
+    email: "fxcosta@ucp.pt"
+    orcid: "https://orcid.org/0000-0001-6675-0355"
+version: 1.0.0
+date-released: "2026-08-25"
+repository-code: "https://github.com/jonsv89/biological-clock-of-multimorbidity"
+license: GPL-3.0-only
+keywords:
+  - multimorbidity
+  - comorbidity network
+  - electronic health records
+  - primary care
+  - SIDIAP
+  - epidemiology
+# preferred-citation:
+#   TODO: uncomment and fill in once the associated manuscript is published,
+#   e.g.:
+#   type: article
+#   authors: [...]
+#   title: "The biological clock of multimorbidity: temporal dynamics of disease co-occurrence in primary care"
+#   journal: "..."
+#   year: 2026
+#   doi: "..."
