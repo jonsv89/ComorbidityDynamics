@@ -153,7 +153,47 @@ python disease_network.py metrics <file> --pathLoad data --pathSave results --ed
 python disease_network.py rankings <file> --pathSave results --metrics OutDegreeW PageRank --edgeWeight RR_shrunk cases_event 
 ```
 
+---
 
+### `08_ProspectiveComorbidities.py` — Propective Comorbidities Comparison
+
+Reads 3 file paths:
+- _posfile_: Path to network saved as an edgelist, whose edges will indicate positive logit.
+- _negfile_: Path to network saved as an edgelist, whose edges will indicate negative logit.
+- _attrfile_: Path to table of node category to be added to the network.
+
+Computes the prospective comorbidities of the networks in _posfile_ and _negfile_. Afterwards, compares how the categories from _attrfile_ are prospectively connected within the set of nodes shared in the networks within _posfile_ and _negfile_.
+
+Optional arguments deal with different file naming organization as well as wether to save intermediary results and plotting results.
+
+```bash
+python 08_ProspectiveComorbidities.py <posfile> <negfile> <attrfile> [-h] [--posweight POSWEIGHT] [--possource POSSOURCE] [--postarget POSTARGET] [--negweight NEGWEIGHT] [--negsource NEGSOURCE] [--negtarget NEGTARGET] [--attrnode ATTRNODE] [--catnode CATNODE] [--save SAVE] [--plot PLOT] [--pos_label POS_LABEL] [--neg_label NEG_LABEL] [--fig_title FIG_TITLE]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --posweight POSWEIGHT
+                        Edgelist column label of `weight` attribute in `posfile`.
+  --possource POSSOURCE
+                        Edgelist column label of `source` attribute in `posfile`.
+  --postarget POSTARGET
+                        Edgelist column label of `target` attribute in `posfile`.
+  --negweight NEGWEIGHT
+                        Edgelist column label of `weight` attribute in `negfile`.
+  --negsource NEGSOURCE
+                        Edgelist column label of `source` attribute in `negfile`.
+  --negtarget NEGTARGET
+                        Edgelist column label of `target` attribute in `negfile`.
+  --attrnode ATTRNODE   Table column label of `node` attribute in `attrfile`.
+  --catnode CATNODE     Table column label of `category` attribute in `attrfile`.
+  --save SAVE           Whether to save intermediary files.
+  --plot PLOT           Whether to plot the results.
+  --pos_label POS_LABEL
+                        Label for the positive network in the plot.
+  --neg_label NEG_LABEL
+                        Label for the negative network in the plot.
+  --fig_title FIG_TITLE
+                        Title for the plot.
+```
 
 ---
 
@@ -161,7 +201,7 @@ python disease_network.py rankings <file> --pathSave results --metrics OutDegree
 
 R packages: `data.table`, `fst`, `survival`, `ashr`, `igraph`, `UpSetR`, `ggplot2`, `ggrepel`, `ggtext`, `ggnewscale`, `patchwork`, `plotly`, `ggalluvial`, `forestplot`, `EbayesThresh`, `VennDiagram`, `dendextend`, `gplots`, `gridExtra`, `MASS`, `flextable`, `officer`, `dplyr`, `tidyr`, `scales`
 
-Python packages: `pandas`, `numpy`, `networkx`
+Python packages: `pandas`, `numpy`, `networkx`, `distanceclosure` ([Available here](https://github.com/CASCI-lab/distanceclosure))
 
 ---
 
