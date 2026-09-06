@@ -1,4 +1,4 @@
-# Follow-up duration determines multimorbidity detection in primary care
+# Temporal dynamics of comorbidity detection in primary care
 
 **Sánchez-Valle J, Zambrana C, Navarro-Martínez A, Costa FX, Rocha L, Cirillo D, Violán C, Valencia A.**
 
